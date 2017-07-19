@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.shop.model.Comment" table="comment_table" lazy="true">
+
+		<id name="id">
+			<generator class="native" />
+		</id>
+
+		<property name="content" ></property>
+		
+		<many-to-one name="item"  column="item_id"
+			cascade="save-update"  ></many-to-one>
+
+
+	</class>
+
+</hibernate-mapping>

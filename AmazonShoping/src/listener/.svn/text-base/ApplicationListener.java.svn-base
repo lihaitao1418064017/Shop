@@ -1,0 +1,57 @@
+package listener;
+
+import java.sql.Connection;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import util.ServerFactory;
+
+public class ApplicationListener implements ServletContextListener
+{
+
+	public void contextDestroyed(ServletContextEvent arg0)
+	{
+		System.out.println("仓储物流管理系统服务器停止了...");
+	}
+
+	public void contextInitialized(ServletContextEvent event)
+	{
+		System.out.println("仓储物流管理系统服务器启动了...");
+		// 获取和配置全局参数
+		ServletContext context = event.getServletContext();
+		String webroot = context.getRealPath("/");
+		System.out.println("服务器根路径-------" + webroot);
+		// 获取和配置临时照片清理器
+//		long interval = Long.parseLong(context.getInitParameter("TempPhotoThreadInterval"));
+//		long expire = Long.parseLong(context.getInitParameter("TempPhotoExpireTime"));
+//		String path=context.getInitParameter("BusinessPhotoPath");		
+//		TempPhotoCleaner cleaner = TempPhotoCleaner.getInstance();
+//		cleaner.setExpire(expire);
+//		cleaner.setInterval(interval);
+//		cleaner.setBusinessPhotoSavePath(path);
+//		cleaner.start();// 启动清理线程
+		// 获取和配置数据库连接参数
+//		DBHelper.connectionString = context.getInitParameter("DatabaseConnectionUrl");
+//		DBHelper.user = context.getInitParameter("DatabaseUserName");
+//		DBHelper.password = context.getInitParameter("DatabaseUserPassword");
+//		System.out.println("DatabaseConnectionString="+DBHelper.connectionString);
+//		System.out.println("DatabaseUserName="+DBHelper.user);
+//		System.out.println("DatabaseUserPassword="+DBHelper.password);
+//		Connection connection=null;
+//		try {
+//			connection=DBHelper.createConnection();
+//			System.out.println("testing connect databse...ok!");
+//			//初始化税务机关管理器（需要数据库的正确连接）
+//			TaxDepartmentManager manager=TaxDepartmentManager.getInstance();
+//			manager.init();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}finally{
+//			DBHelper.closeConnection(connection);
+//		}
+		
+	}
+
+}

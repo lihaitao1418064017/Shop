@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.shop.model.Product" table="product_table" lazy="true">
+
+		<id name="id">
+			<generator class="native" />
+		</id>
+
+		<property name="price" ></property>
+		<property name="name" ></property>
+		<property name="photo" ></property>
+		<property name="descriptive" ></property>
+		<property name="isHot" ></property>
+		<property name="shopTime" ></property>
+		<property name="status" ></property>
+		<property name="type" ></property>
+		<property name="monthSum" ></property>
+		<property name="totalSum" ></property>
+		<property name="taste" ></property>
+		<property name="pack" ></property>
+		<property name="sum" ></property>
+		<property name="evaluate" ></property>
+		<property name="oldPrice" ></property>
+		<property name="preferential" ></property>
+		<property name="eatWay" ></property>
+		
+		
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<!-- <constant name="struts.action.extension" value="action"></constant> 
+		<constant name="struts.ui.theme" value="simple" /> -->
+
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.multipart.maxSize" value="1073741824" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="test_actions" extends="struts-default">
+	</package>
+
+
+	<package name="json_actions" extends="struts-default,json-default">
+		<global-results>
+			<result name="success" type="json">
+				<!-- 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法 -->
+				<param name="root">dataMap</param>
+			</result>
+		</global-results>
+	</package>
+
+
+
+	<package name="list_actions" extends="json_actions">
+
+		<!-- 基本信息管理 -->
+		<!--注册 -->
+		<action name="RegisterForShop" class="com.shop.action.RegisterForShopAction">
+		</action>
+		<!--登录 -->
+		<action name="LoginForShop" class="com.shop.action.LoginForShopAction"></action>
+		<!--更新用户个人信息 -->
+		<action name="UpdateUserInfo" class="com.shop.action.updateUserInfoAction"></action>
+		<!--更新用户密码  -->
+		<action name="UpdateUserPassword" class="com.shop.action.UpdateUserPasswordAction"></action>
+		<!--得到用户个人信息  -->
+		<action name="GetUserInfo" class="com.shop.action.GetUserInfoAction"></action>
+		<!--更新用户支付密码  -->
+		<action name="UpdatePayPassword" class="com.shop.action.UpdatePayPasswordAction"></action>
+		<!--更新用户手机号  -->
+		<action name="UpdateUserPhone" class="com.shop.action.UpdateUserPhoneAction"></action>
+		<!--更新用户email  -->
+		<action name="UpdateUserEmail" class="com.shop.action.UpdateUserEmailAction"></action>
+		<!--更新用户手机信息  -->
+		<action name="UpdateUserIdCard" class="com.shop.action.UpdateUserIdCardAction"></action>
+		<!-- 获取个人用户收货地址信息 -->
+		<action name="GetUserReceiveAddress" class="com.shop.action.GetUserReceiveAddressAction"></action>
+		<!--删除用户指定的某个收货地址  -->
+		<action name="RemoveUserReceiveAddress" class="com.shop.action.RemoveUserReceiveAddressAction"></action>
+		<!--添加用户收获地址信息  -->
+		<action name="AddUserReceiveAddress" class="com.shop.action.AddUserReceiveAddressAction"></action>
+		<!-- 获取热卖商品 -->
+		<action name="GetHotProduct" class="com.shop.action.GetHotProductAction"></action>
+		<!-- 获取活动商品 -->
+		<action name="GetActivityProduct" class="com.shop.action.GetActivityProductAction"></action>
+		<!--获取商品详细信息  -->
+		<action name="GetProductInfoMinute" class="com.shop.action.GetProductMinuteInfoAction"></action>
+		<!-- 增加订单信息 -->
+		<action name="AddItemInfo" class="com.shop.action.AddItemInfoAction"></action>
+		<!-- 获取用户订单信息中的商品信息 -->
+		<action name="GetUserItemInfo" class="com.shop.action.GetUserItemInfoAction"></action>
+		<!-- 更新会计公司和总价 -->
+		<action name="UpdateSendCompany" class="com.shop.action.UpdateSendCompanyAddressAction"></action>
+		<!-- 得到商品订单信息 -->
+		<action name="GetItemInfo" class="com.shop.action.GetItemInfoAction"></action>
+		<!-- 设置付款成功 -->
+		<action name="PayItemSuccess" class="com.shop.action.PayItemSuccessAction"></action>
+		<!-- 确认收货成功的商品 -->
+		<action name="SureItemSuccessAction" class="com.shop.action.SureItemSuccessAction"></action>
+		<!-- 删除交易失败的订单 -->
+		<action name="DeleteFailItem" class="com.shop.action.DeleteCloseItemAction"></action>
+		<!-- 得到交易成功的订单信息 -->
+		<action name="GetSuccessItemInfo" class="com.shop.action.GetSuccessItemInfoAction"></action>
+		<!-- 添加评论 -->
+		<action name="AddCommentList" class="com.shop.action.AddCommentListAction"></action>
+	</package>
+	<package name="image_actions" extends="struts-default">
+
+		<global-results>
+			<result name="image" type="stream">
+				<param name="contentType">image/png</param>
+				<param name="inputName">imageStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</global-results>
+
+
+	</package>
+
+
+
+</struts>

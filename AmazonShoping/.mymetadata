@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="实名制办税系统后台服务"
+  id="myeclipse.1420209755238"
+  context-root="/taxserver"
+  j2ee-spec="5.0"
+  archive="实名制办税系统后台服务.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

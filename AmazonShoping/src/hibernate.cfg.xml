@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+
+		
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql:///firstShop</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">123456</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name=" hibernate.jdbc.batch_size">500</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		 
+		 
+		<property name="hbm2ddl.auto">update</property>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.connection.autocommit">true</property>	<!-- 是否使用JDBC事务，默认false，即使用事务自动提交功能 -->
+
+
+		<!-- 映射实体对象 -->
+		<mapping resource="com/shop/model/User.hbm.xml"/>
+		<mapping resource="com/shop/model/Address.hbm.xml"/>
+		<mapping resource="com/shop/model/Product.hbm.xml"/>
+	    <mapping resource="com/shop/model/Item.hbm.xml"/>
+	    <mapping resource="com/shop/model/Comment.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

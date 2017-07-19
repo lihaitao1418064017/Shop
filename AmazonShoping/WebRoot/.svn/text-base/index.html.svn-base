@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>index</title>
+	</head>
+	<body>
+		<center>
+			<h2>
+				由于大赛规定参赛作品不得出现参赛单位信息，所以该模块暂时仅以此页面来代替显示。
+			</h2>
+			<img src="app_icon.jpg" width="200" height="200" alt="Logo" />
+		</center>
+	</body>
+</html>

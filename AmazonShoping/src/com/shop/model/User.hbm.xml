@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.shop.model.User" table="user_table" lazy="true">
+
+		<id name="user_id">
+			<generator class="native" />
+		</id>
+
+		<property name="user_name"  ></property>
+		
+		<property name="user_email" not-null="true"></property>
+		
+		<property name="user_petName"></property>
+		<property name="user_pirthday" column="register_date" type="timestamp"></property>
+		<property name="user_password"  not-null="true"></property>
+		<property name="user_sex" ></property>
+		<property name="user_telephone"  ></property>
+		<property name="active_code" ></property>
+		<property name="active_status" ></property>
+		<property name="payPassword"></property>
+		<property name="idCard"></property>
+		
+		<!--  <set name="addressSet" table="addressSet_table" order-by="address desc">创建一张新表存储集合
+        	<key column="user_id"></key>  主键 :默认是User的id
+        	<element type="string" column="address"></element>集合元素 
+        </set> -->
+		
+		<!-- <many-to-one name="warehouseCompany" column="warehouse_company_id"
+			cascade="save-update"></many-to-one> -->
+
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+
+		<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="connection.url">jdbc:sqlserver://112.126.89.206:1433;databaseName=warehouse</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password">19781028hqDQDWW</property>
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+		<property name=" hibernate.jdbc.batch_size">500</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.connection.autocommit">true</property>	<!-- 是否使用JDBC事务，默认false，即使用事务自动提交功能 -->
+
+
+		<!-- 映射实体对象 -->
+		<mapping resource="domain/WarehouseCompany.hbm.xml" />
+		<mapping resource="domain/Employee.hbm.xml" />
+	<mapping resource="domain/Photo.hbm.xml" />
+
+
+
+
+
+	</session-factory>
+</hibernate-configuration>
